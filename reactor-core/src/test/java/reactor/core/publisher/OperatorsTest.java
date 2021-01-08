@@ -972,4 +972,9 @@ public class OperatorsTest {
 
 		assertSubscriber.assertNoError().awaitAndAssertNextValues(123);
 	}
+
+	@Test
+	public void meaningfulScannableName() {
+		assertThat(Scannable.from(Operators.emptySubscription()).name()).isEqualTo("empty");
+	}
 }
